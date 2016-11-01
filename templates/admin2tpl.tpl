@@ -116,7 +116,7 @@ $( document ).ready(function() {
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[1]" class="form-control input-number" value="{{freespaces1}}">
+          <input type="text" name="quant[1]" class="form-control input-number" value="{{freespaces1}}" min="-10">
           <span class="input-group-btn">
               <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
                   <span class="glyphicon glyphicon-plus"></span>
@@ -131,7 +131,7 @@ $( document ).ready(function() {
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[2]" class="form-control input-number" value="{{freespaces2}}">
+          <input type="text" name="quant[2]" class="form-control input-number" value="{{freespaces2}}" min="-10">
           <span class="input-group-btn">
               <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
                   <span class="glyphicon glyphicon-plus"></span>
@@ -146,7 +146,7 @@ $( document ).ready(function() {
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[3]" class="form-control input-number" value="{{freespaces3}}">
+          <input type="text" name="quant[3]" class="form-control input-number" value="{{freespaces3}}" min="-10">
           <span class="input-group-btn">
               <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[3]">
                   <span class="glyphicon glyphicon-plus"></span>
@@ -161,7 +161,7 @@ $( document ).ready(function() {
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
-          <input type="text" name="quant[4]" class="form-control input-number" value="{{freespaces4}}">
+          <input type="text" name="quant[4]" class="form-control input-number" value="{{freespaces4}}" min="-10">
           <span class="input-group-btn">
               <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[4]">
                   <span class="glyphicon glyphicon-plus"></span>
