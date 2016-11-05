@@ -27,6 +27,38 @@ conn.execute('''CREATE TABLE PARKKIPAIKKANUMEROT
        NYKYMAARA        INT     NOT NULL);''')
 print("Table PARKKIPAIKKANUMEROT created successfully")
 
+#autojen sisäänajamislogi
+conn.execute('''CREATE TABLE PARKKIPAIKKALOGAUTOT
+       (ID INTEGER PRIMARY KEY     ,
+       KOHDEALUE           INT    NOT NULL,
+       AIKA              TEXT     NOT NULL,
+       NYKYMAARA1        INT     NOT NULL,
+       NYKYMAARA2        INT     NOT NULL,
+       NYKYMAARA3        INT     NOT NULL,
+       NYKYMAARA4        INT     NOT NULL);''')
+print("Table PARKKIPAIKKALOGAUTOT created successfully")
+
+
+#tilan logi
+conn.execute('''CREATE TABLE PARKKIPAIKKALOGTILA
+       (ID INTEGER PRIMARY KEY     ,
+       AIKA              TEXT     NOT NULL,
+       NYKYMAARA1        INT     NOT NULL,
+       NYKYMAARA2        INT     NOT NULL,
+       NYKYMAARA3        INT     NOT NULL,
+       NYKYMAARA4        INT     NOT NULL);''')
+print("Table PARKKIPAIKKALOGTILA created successfully")
+
+
+#configit
+conn.execute('''CREATE TABLE PARKKIPAIKKACONFIG
+       (ID INTEGER PRIMARY KEY     ,
+       LAYOUT              INT     NOT NULL,
+       DELAY        INT     NOT NULL);''')
+print("Table PARKKIPAIKKACONFIG created successfully")
+
+
+
 conn.execute("INSERT INTO PARKKIPAIKKANUMEROT(ID,ALUE,NYKYMAARA) \
       VALUES (1, 1,0)")
 
@@ -39,6 +71,8 @@ conn.execute("INSERT INTO PARKKIPAIKKANUMEROT(ID,ALUE,NYKYMAARA) \
       
 conn.execute("INSERT INTO TELLUSNUMEROT(ID,NYKYMAARA) \
       VALUES (1, 0)")
+      
+conn.execute("INSERT INTO PARKKIPAIKKACONFIG(LAYOUT,DELAY) VALUES (1, 1)")
 
 conn.commit()
 conn.close()

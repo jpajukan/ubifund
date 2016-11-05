@@ -107,7 +107,7 @@ $( document ).ready(function() {
   <p>The .container class provides a responsive fixed width container.</p>           
 </div>
 -->
-<form action="/admininfo2" method="post">
+<form action="/padmin" method="post">
   <div class="center">
     <p>Alue1</p>
     <div class="input-group">
@@ -171,7 +171,19 @@ $( document ).ready(function() {
     <p></p>
 
 </div>
-<button type="submit">Lähetä</button>
+<button type="submit" value="paivita">Lähetä</button>
+<button name="kohde" type="submit" value="1">Alue1</button>
+<button name="kohde" type="submit" value="2">Alue2</button>
+<button name="kohde" type="submit" value="3">Alue3</button>
+<button name="kohde" type="submit" value="4">Alue4</button>
+
+<button name="layout" type="submit" value="1">Layout1</button>
+<button name="layout" type="submit" value="2">Layout2</button>
+
+<button name="delay" type="submit" value="1">Delay 1min</button>
+<button name="delay" type="submit" value="15">Delay 15min</button>
+
+
 </form>
 </body>
 </html>
