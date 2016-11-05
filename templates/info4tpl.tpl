@@ -28,8 +28,8 @@
   <p>The .container class provides a responsive fixed width container.</p>           
 </div>
 -->
-<h1>TAPA1</>
 
+<h1>TAPA2</>
 
 <div class="container">
     <div style="position: relative; left: 0; top: 0;">
@@ -42,6 +42,7 @@
 </div>
 
 <h3>Tieto päivitetty{{delay}}</h3>
+
 
 </body>
 </html>
