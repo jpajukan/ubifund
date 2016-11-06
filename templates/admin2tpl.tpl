@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Parking lot admin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap.min.css">
@@ -31,7 +31,7 @@ $( document ).ready(function() {
         if (!isNaN(currentVal)) {
             if(type == 'minus') {
                 var minValue = parseInt(input.attr('min')); 
-                if(!minValue) minValue = 1;
+                if(!minValue) minValue = 0;
                 if(currentVal > minValue) {
                     input.val(currentVal - 1).change();
                 } 
@@ -41,7 +41,7 @@ $( document ).ready(function() {
     
             } else if(type == 'plus') {
                 var maxValue = parseInt(input.attr('max'));
-                if(!maxValue) maxValue = 9999999999999;
+                if(!maxValue) maxValue = 32;
                 if(currentVal < maxValue) {
                     input.val(currentVal + 1).change();
                 }
@@ -112,7 +112,7 @@ $( document ).ready(function() {
     <p>Alue1</p>
     <div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+              <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
@@ -127,7 +127,7 @@ $( document ).ready(function() {
     <p>Alue2</p>
     <div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
+              <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[2]">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
@@ -142,7 +142,7 @@ $( document ).ready(function() {
     <p>Alue3</p>
     <div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
+              <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[3]">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>
@@ -157,7 +157,7 @@ $( document ).ready(function() {
     <p>Alue4</p>
     <div class="input-group">
           <span class="input-group-btn">
-              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[4]">
+              <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[4]">
                   <span class="glyphicon glyphicon-minus"></span>
               </button>
           </span>

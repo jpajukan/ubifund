@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Checkmark parking lot</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap.min.css">
@@ -11,37 +11,62 @@
     <style>
         #mark1, #mark2, #mark3, #mark4{
             z-index: 10;
+        }     
+
+       body{
+            background-color: #004766;
+        }
             
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 4em;
+            <!--text-transform: uppercase;-->
+        }
+        #t1, #t2, #t3, #t4 {
+           position: absolute;
+           top: 425px;
+
+           width: 100%;
+           z-index: 11;
+           font-size: 10em;
+           color: white;
+        }
+        #t1 {
+           left: 370px;        
+        }
+        #t2 {
+           left: 745px;         
+        }
+        #t3 {
+           left: 1120px;        
+        }
+        #t4 {
+           left: 1495px;         
         }
 
-    
-    
-    
     </style>
   
 </head>
 <body>
-  <!--
-<div class="container">
-  <h1>My First Bootstrap Page</h1>
-  <p>This part is inside a .container class.</p> 
-  <p>The .container class provides a responsive fixed width container.</p>           
-</div>
--->
 
-<h1>TAPA2</>
+<div>
 
-<div class="container">
-    <div style="position: relative; left: 0; top: 0;">
-    <img id="bg1" src="bg1.jpg" style="position: relative; top: 0; left: 0;"/>
-    <img id="mark1" src="m{{freespaces1}}.jpg" style="position: absolute; top: 180px; left: 200px;"/>
-    <img id="mark2" src="m{{freespaces2}}.jpg" style="position: absolute; top: 180px; left: 400px;"/>
-    <img id="mark3" src="m{{freespaces3}}.jpg" style="position: absolute; top: 180px; left: 600px;"/>
-    <img id="mark4" src="m{{freespaces4}}.jpg" style="position: absolute; top: 180px; left: 750px;"/>
-</div>
-</div>
+    <img id="bg1" src="bg1.png"/>
+    <img id="mark1" src="m{{freespaces1}}b.png" style="position: absolute; top: 220px; left: 242px;"/>
+    <img id="mark2" src="m{{freespaces2}}b.png" style="position: absolute; top: 220px; left: 616px;"/>
+    <img id="mark3" src="m{{freespaces3}}b.png" style="position: absolute; top: 220px; left: 991px;"/>
+    <img id="mark4" src="m{{freespaces4}}b.png" style="position: absolute; top: 220px; left: 1365px;"/>
 
-<h3>Tieto päivitetty{{delay}}</h3>
+    <h1>Päivitetty {{delay}} min sitten</h1>
+</div>
+<div id="t1">{{freespaces1}}</div>​ <!--Replace these with the real values -->
+<div id="t2">{{freespaces2}}</div>​
+<div id="t3">{{freespaces3}}</div>​
+<div id="t4">{{freespaces4}}</div>​
+</body>
+</html>
+
 
 
 </body>
