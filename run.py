@@ -87,9 +87,12 @@ def info4(db):
     
     for key, value in info.items():
         if value == 0:
-            picture[key] = 2;#full
+            picture[key + 'binary'] = 2;#full
         else:
-            picture[key] = 1;#free
+            picture[key + 'binary'] = 1;#free
+        
+        picture[key] = value
+        
     
     picture['delay'] = delay  
     
