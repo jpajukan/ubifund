@@ -4,6 +4,7 @@
   <title>Checkmark parking lot</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="15" >
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="jquerymin.js"></script>
   <script src="bootstrap.min.js"></script>
@@ -53,10 +54,10 @@
 <div>
 
     <img id="bg1" src="bg1.png"/>
-    <img id="mark1" src="m{{freespaces1}}b.png" style="position: absolute; top: 220px; left: 242px;"/>
-    <img id="mark2" src="m{{freespaces2}}b.png" style="position: absolute; top: 220px; left: 616px;"/>
-    <img id="mark3" src="m{{freespaces3}}b.png" style="position: absolute; top: 220px; left: 991px;"/>
-    <img id="mark4" src="m{{freespaces4}}b.png" style="position: absolute; top: 220px; left: 1365px;"/>
+    <img id="mark1" src="m{{freespaces1binary}}b.png" style="position: absolute; top: 220px; left: 242px;"/>
+    <img id="mark2" src="m{{freespaces2binary}}b.png" style="position: absolute; top: 220px; left: 616px;"/>
+    <img id="mark3" src="m{{freespaces3binary}}b.png" style="position: absolute; top: 220px; left: 991px;"/>
+    <img id="mark4" src="m{{freespaces4binary}}b.png" style="position: absolute; top: 220px; left: 1365px;"/>
 
     <h1>Päivitetty {{delay}} min sitten</h1>
 </div>
