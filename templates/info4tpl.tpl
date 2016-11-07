@@ -4,7 +4,7 @@
   <title>Checkmark parking lot</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="30" >
+  <meta http-equiv="refresh" content="15" >
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="jquerymin.js"></script>
   <script src="bootstrap.min.js"></script>
@@ -26,33 +26,33 @@
         }
         #t1, #t2, #t3, #t4 {
            position: absolute;
-           top: 372px;
+           top: 425px;
+
+           width: 100%;
            z-index: 11;
-           font-size: 14em;
+           font-size: 10em;
            color: white;
-           height: 200px;
-           width: 333px;
-           text-align: center; 
         }
         #t1 {
-           left: 242px;        
+           left: 370px;        
         }
         #t2 {
-           left: 616px;         
+           left: 745px;         
         }
         #t3 {
-           left: 991px;        
+           left: 1120px;        
         }
         #t4 {
+           left: 1495px;         
         }
 
     </style>
   
 </head>
-
 <body>
 
 <div>
+
     <img id="bg1" src="bg1.png"/>
     <img id="mark1" src="m{{freespaces1binary}}b.png" style="position: absolute; top: 220px; left: 242px;"/>
     <img id="mark2" src="m{{freespaces2binary}}b.png" style="position: absolute; top: 220px; left: 616px;"/>
@@ -61,13 +61,14 @@
 
     <h1>Päivitetty {{delay}} min sitten</h1>
 </div>
-
-<div id="t1">{{freespaces1}}</div>​
+<div id="t1">{{freespaces1}}</div>​ <!--Replace these with the real values -->
 <div id="t2">{{freespaces2}}</div>​
 <div id="t3">{{freespaces3}}</div>​
 <div id="t4">{{freespaces4}}</div>​
-
 </body>
-
 </html>
 
+
+
+</body>
+</html>

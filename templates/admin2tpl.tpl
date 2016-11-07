@@ -177,11 +177,11 @@ $( document ).ready(function() {
 <button name="kohde" type="submit" value="3">Alue3</button>
 <button name="kohde" type="submit" value="4">Alue4</button>
 
-<button name="layout" type="submit" value="1">Checkmark</button>
-<button name="layout" type="submit" value="2">Numerical</button>
+<button name="layout" type="submit" value="1">Layout1</button>
+<button name="layout" type="submit" value="2">Layout2</button>
 
 <button name="delay" type="submit" value="1">Delay 1min</button>
-<button name="delay" type="submit" value="10">Delay 10min</button>
+<button name="delay" type="submit" value="15">Delay 15min</button>
 
 
 </form>
