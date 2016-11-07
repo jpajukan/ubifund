@@ -27,7 +27,9 @@
         
         #t1, #t2, #t3, #t4 {
            position: absolute;
+           top: 330px;
            z-index: 11;
+           font-size: 18em;
            color: white;
            height: 200px;
            width: 333px;
