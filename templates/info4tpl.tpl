@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Checkmark parking lot</title>
+  <title>Numerical parking lot</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="30" >
@@ -26,23 +26,23 @@
         }
         
         #t1, #t2, #t3, #t4 {
-           position: absolute;
-           top: 330px;
-           z-index: 11;
-           font-size: 18em;
-           color: white;
-           height: 200px;
-           width: 333px;
-           text-align: center; 
+            position: absolute;
+            top: 330px;
+            z-index: 11;
+            font-size: 18em;
+            color: white;
+            height: 200px;
+            width: 333px;
+            text-align: center; 
         }
         #t1 {
-           left: 242px;        
+            left: 242px;        
         }
         #t2 {
-           left: 616px;         
+            left: 616px;         
         }
         #t3 {
-           left: 991px;        
+            left: 991px;        
         }
         #t4 {
             left: 1365px;
