@@ -4,7 +4,7 @@
   <title>Checkmark parking lot</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="15" >
+  <meta http-equiv="refresh" content="30" >
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="jquerymin.js"></script>
   <script src="bootstrap.min.js"></script>
@@ -28,14 +28,6 @@
   
 </head>
 <body>
-
-  <!--
-<div class="container">
-  <h1>My First Bootstrap Page</h1>
-  <p>This part is inside a .container class.</p> 
-  <p>The .container class provides a responsive fixed width container.</p>           
-</div>
--->
 
 <div>
 
