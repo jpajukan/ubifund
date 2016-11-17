@@ -49,6 +49,62 @@ conn.execute('''CREATE TABLE PARKKIPAIKKALOGTILA
        NYKYMAARA4        INT     NOT NULL);''')
 print("Table PARKKIPAIKKALOGTILA created successfully")
 
+#telluspaikattila
+conn.execute('''CREATE TABLE TELLUSPAIKATROW
+       (ID INTEGER PRIMARY KEY     ,
+       AIKA              TEXT     NOT NULL,
+       PAIKKA1        INT     NOT NULL,
+       PAIKKA2        INT     NOT NULL,
+       PAIKKA3        INT     NOT NULL,
+       PAIKKA4        INT     NOT NULL,
+       PAIKKA5        INT     NOT NULL,
+       PAIKKA6        INT     NOT NULL,
+       PAIKKA7        INT     NOT NULL,
+       PAIKKA8        INT     NOT NULL,
+       PAIKKA9        INT     NOT NULL,
+       PAIKKA10        INT     NOT NULL,
+       PAIKKA11        INT     NOT NULL,
+       PAIKKA12        INT     NOT NULL,
+       PAIKKA13        INT     NOT NULL,
+       PAIKKA14        INT     NOT NULL,
+       PAIKKA15        INT     NOT NULL,
+       PAIKKA16        INT     NOT NULL,
+       PAIKKA17        INT     NOT NULL,
+       PAIKKA18        INT     NOT NULL,
+       PAIKKA19        INT     NOT NULL,
+       PAIKKA20        INT     NOT NULL,
+       PAIKKA21        INT     NOT NULL,
+       PAIKKA22        INT     NOT NULL,
+       PAIKKA23        INT     NOT NULL,
+       PAIKKA24        INT     NOT NULL,
+       PAIKKA25        INT     NOT NULL,
+       PAIKKA26        INT     NOT NULL,
+       PAIKKA27        INT     NOT NULL,
+       PAIKKA28        INT     NOT NULL,
+       PAIKKA29        INT     NOT NULL,
+       PAIKKA30        INT     NOT NULL,
+       PAIKKA31        INT     NOT NULL,
+       PAIKKA32        INT     NOT NULL,
+       PAIKKA33        INT     NOT NULL,
+       PAIKKA34        INT     NOT NULL,
+       PAIKKA35        INT     NOT NULL,
+       PAIKKA36        INT     NOT NULL,
+       PAIKKA37        INT     NOT NULL,
+       PAIKKA38        INT     NOT NULL,
+       PAIKKA39        INT     NOT NULL,
+       PAIKKA40        INT     NOT NULL,
+       PAIKKA41        INT     NOT NULL,
+       PAIKKA42        INT     NOT NULL,
+       PAIKKA43        INT     NOT NULL,
+       PAIKKA44        INT     NOT NULL,
+       PAIKKA45        INT     NOT NULL,
+       PAIKKA46        INT     NOT NULL,
+       PAIKKA47        INT     NOT NULL,
+       PAIKKA48        INT     NOT NULL,
+       PAIKKA49        INT     NOT NULL,
+       PAIKKA50        INT     NOT NULL);''')
+print("Table TELLUSPAIKATROW created successfully")
+
 
 #configit
 conn.execute('''CREATE TABLE PARKKIPAIKKACONFIG
