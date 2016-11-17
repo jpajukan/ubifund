@@ -169,7 +169,84 @@ def padmin(db):
         }
     return template("templates/admin2tpl.tpl", info)
     
+
+#TELLUS info interface 
+@route('/tinfo')
+def tadmin(db):
+    row = db.execute("SELECT * FROM TELLUSPAIKATROW ORDER BY ID DESC LIMIT 1").fetchall()
     
+    print(row[0])
+    info = {}
+    counter = 1
+    
+    for col in row[0][2:]:
+        
+        info["PAIKKA" + str(counter)] = col
+        counter = counter +1
+    
+    return template("templates/tinfo1tpl.tpl", info)
+    
+#TELLUS Admin interface  
+@route('/tadmin')
+def tadmin(db):  
+    row = db.execute("SELECT * FROM TELLUSPAIKATROW ORDER BY ID DESC LIMIT 1").fetchall()
+    
+    print(row[0])
+    info = {}
+    counter = 1
+    
+    for col in row[0][2:]:
+        #print(col)
+        
+        checked = ""
+        
+        if col == 1:
+            checked = "checked"
+        
+        info["PAIKKA" + str(counter)] = checked
+        counter = counter +1
+        #print(colV)
+        
+    
+    #info = {'freespaces1': '1','freespaces2': '1','freespaces3': '1','freespaces4': '1'}
+    
+    #if row:
+    #    info = {'freespaces1': row[0]["NYKYMAARA"],
+    #    'freespaces2': row[1]["NYKYMAARA"],
+    #    'freespaces3': row[2]["NYKYMAARA"],
+    #    'freespaces4': row[3]["NYKYMAARA"]
+    #    }
+    #return template("templates/admin2tpl.tpl", info)
+    
+    return template("templates/admin3tpl.tpl", info)
+    
+@route('/tadmin', method='POST')
+def tadminPost(db):
+
+    taken = request.POST.getlist('paikat')
+    
+    #print(taken)
+    
+    
+    
+    
+    
+    
+
+    places = [0] * 50
+    
+    for p in taken:
+        pint = int(p)
+        pint = pint -1
+        places[pint] = 1
+    
+    db.execute("INSERT INTO TELLUSPAIKATROW \
+                        VALUES (NULL,CURRENT_TIMESTAMP,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", places)
+
+    
+    #return template("templates/admin3.html")
+    
+    return tadmin(db)
 
 run(host='localhost', port=8080, debug=True)
 
