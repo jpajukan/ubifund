@@ -130,7 +130,14 @@ width: 150px;
     <!--<input type="checkbox" value="1">-->
     </table>
     <br>
-    <button type="submit" value="paivita">Lähetä</button>
+    <button name="paivita" type="submit" value="paivita">Lähetä</button>
+    <br>
+    <br>
+    <button name="event" type="submit" value="1">Ihminen käveli suoraan paikalle</button>
+    <br>
+    <button name="event" type="submit" value="2">Ihminen etsi paikkaa epätietoisena ja löysi sen</button>
+    <br>
+    <button name="event" type="submit" value="3">Ihminen etsi paikkaa mutta ei löytänyt sitä</button>
 </form>
 </body>
 </html>
