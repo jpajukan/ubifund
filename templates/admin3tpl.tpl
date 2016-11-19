@@ -138,6 +138,15 @@ width: 150px;
     <button name="event" type="submit" value="2">Ihminen etsi paikkaa epätietoisena ja löysi sen</button>
     <br>
     <button name="event" type="submit" value="3">Ihminen etsi paikkaa mutta ei löytänyt sitä</button>
+    <br>
+    <br>
+    <button name="layout" type="submit" value="1">Layout 1</button>
+    <button name="layout" type="submit" value="2">Layout 2</button>
+    <br>
+    <br>
+    <button name="delay" type="submit" value="1">Delay 1</button>
+    <button name="delay" type="submit" value="10">Delay 10</button>
+    
 </form>
 </body>
 </html>

@@ -113,5 +113,7 @@
     <!--<input type="checkbox" value="1">-->
     </table>
 </div>
+<p> viive {{DELAY}} min</p>
+<p> Paikat {{FREE}} kpl</p>
 </body>
 </html>

@@ -172,11 +172,33 @@ def padmin(db):
 
 #TELLUS info interface 
 @route('/tinfo')
-def tadmin(db):
+def tinfo(db):
+    row = db.execute("SELECT * FROM TELLUSCONFIG").fetchone()
+    layout = row['LAYOUT']
+    #layout = 2
+    
+    if layout == 1:
+        return tinfo1(db)
+        
+    if layout == 2:
+        return tinfo2(db)
+  
+  
+def tinfo1(db):  
+
+    delayrow = db.execute("SELECT * FROM TELLUSCONFIG").fetchone()    
+    delay = delayrow['DELAY']
+
+    
     row = db.execute("SELECT * FROM TELLUSPAIKATROW ORDER BY ID DESC LIMIT 1").fetchall()
     
-    print(row[0])
     info = {}
+    info["DELAY"] = delay
+    
+    freeslots = row[0][2:].count(0)
+    info["FREE"] = freeslots
+    
+    
     counter = 1
     
     for col in row[0][2:]:
@@ -185,6 +207,49 @@ def tadmin(db):
         counter = counter +1
     
     return template("templates/tinfo1tpl.tpl", info)
+    
+def tinfo2(db):  
+
+    delayrow = db.execute("SELECT * FROM TELLUSCONFIG").fetchone()    
+    delay = delayrow['DELAY']
+
+    row = db.execute("SELECT * FROM TELLUSPAIKATROW ORDER BY ID DESC LIMIT 1").fetchall()
+    
+    info = {}
+    info["DELAY"] = delay
+
+    info["RIVI1"] = 1;
+    info["RIVI2"] = 1;
+    info["RIVI3"] = 1;
+    info["RIVI4"] = 1;
+    info["RIVI5"] = 1;
+    
+    freeslots = row[0][2:].count(0)
+    info["FREE"] = freeslots
+    
+    
+    
+    
+    
+    counter = 1
+    
+    if 0 in row[0][2:8]:
+        info["RIVI1"] = 0
+        
+    if 0 in row[0][8:16]:
+        info["RIVI2"] = 0
+        
+    if 0 in row[0][16:26]:
+        info["RIVI3"] = 0
+        
+    if 0 in row[0][26:38]:
+        info["RIVI4"] = 0
+    
+    if 0 in row[0][38:52]:
+        info["RIVI5"] = 0
+    
+    
+    return template("templates/tinfo2tpl.tpl", info)
     
 #TELLUS Admin interface  
 @route('/tadmin')
@@ -231,12 +296,23 @@ def tadminPost(db):
     
     paivita = request.POST.get('paivita', 0)
     
+    layout = request.POST.get('layout', 0)
+    
+    delay = request.POST.get('delay', 0)
+    
+    
+    
     #print(taken)
     
     
     if event != 0:
         db.execute("INSERT INTO TELLUSEVENTS VALUES (NULL,CURRENT_TIMESTAMP,?)", event)
     
+    if delay != 0:
+        db.execute("UPDATE TELLUSCONFIG SET DELAY=?", (delay,))
+        
+    if layout != 0:
+        db.execute("UPDATE TELLUSCONFIG SET LAYOUT=?", (layout,))
     
     
     if paivita != 0:
