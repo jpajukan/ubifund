@@ -1,13 +1,35 @@
 <html>
 <html lang="en">
 <head>
-  <title>Numerical parking lot</title>
+  <title>Numerical Tellus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="30" >
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="jquerymin.js"></script>
   <script src="bootstrap.min.js"></script>
+  <style>
+        #free {
+            position: absolute;
+            top: 330px;
+            left: 760px;
+            font-size: 18em;
+            color: white;
+            height: 200px;
+            width: 400px;
+            text-align: center; 
+        }
+        #update {
+            position: absolute;
+            top: 985px;
+            left: 0px;
+            font-size: 4em;
+            color: white;
+            height: 200px;
+            width: 1800px;
+            text-align: right; 
+        }        
+  </style>
 </head> 
 <body>
 <div>
@@ -114,7 +136,7 @@
     </table>
     <img id="ws1" src="ws1.png" style="position: absolute; top: 308px; left: 1290px"/>
 </div>
-<p> viive {{DELAY}} min</p>
-<p> Paikat {{FREE}} kpl</p>
+<div id="free">{{FREE}}</div>​
+<div id="update">Updated {{DELAY}} min ago</div>​
 </body>
 </html>
