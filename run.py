@@ -191,25 +191,27 @@ def tadmin(db):
 def tadmin(db):  
     row = db.execute("SELECT * FROM TELLUSPAIKATROW ORDER BY ID DESC LIMIT 1").fetchall()
     
-    print(row[0])
+    #print(row[0])
     info = {}
     counter = 1
-    
-    for col in row[0][2:]:
-        #print(col)
+    #row[0] = [0] * 52
+    if len(row) != 0:
+        for col in row[0][2:]:
+            #print(col)
+            
+            checked = ""
+            
+            if col == 1:
+                checked = "checked"
+            
+            info["PAIKKA" + str(counter)] = checked
+            counter = counter +1
+            #print(colV)
         
-        checked = ""
-        
-        if col == 1:
-            checked = "checked"
-        
-        info["PAIKKA" + str(counter)] = checked
-        counter = counter +1
-        #print(colV)
-        
-    
     #info = {'freespaces1': '1','freespaces2': '1','freespaces3': '1','freespaces4': '1'}
-    
+    else:
+        for p in range(1,51):
+            info["PAIKKA" + str(p)] = 0
     #if row:
     #    info = {'freespaces1': row[0]["NYKYMAARA"],
     #    'freespaces2': row[1]["NYKYMAARA"],
@@ -225,26 +227,31 @@ def tadminPost(db):
 
     taken = request.POST.getlist('paikat')
     
+    event = request.POST.get('event', 0)
+    
+    paivita = request.POST.get('paivita', 0)
+    
     #print(taken)
     
     
+    if event != 0:
+        db.execute("INSERT INTO TELLUSEVENTS VALUES (NULL,CURRENT_TIMESTAMP,?)", event)
     
     
     
-    
+    if paivita != 0:
+        places = [0] * 50
+        
+        for p in taken:
+            pint = int(p)
+            pint = pint -1
+            places[pint] = 1
+        
+        db.execute("INSERT INTO TELLUSPAIKATROW \
+                            VALUES (NULL,CURRENT_TIMESTAMP,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", places)
 
-    places = [0] * 50
-    
-    for p in taken:
-        pint = int(p)
-        pint = pint -1
-        places[pint] = 1
-    
-    db.execute("INSERT INTO TELLUSPAIKATROW \
-                        VALUES (NULL,CURRENT_TIMESTAMP,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", places)
-
-    
-    #return template("templates/admin3.html")
+        
+        #return template("templates/admin3.html")
     
     return tadmin(db)
 

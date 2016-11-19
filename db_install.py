@@ -106,6 +106,13 @@ conn.execute('''CREATE TABLE TELLUSPAIKATROW
 print("Table TELLUSPAIKATROW created successfully")
 
 
+#tellusevents
+conn.execute('''CREATE TABLE TELLUSEVENTS
+       (ID INTEGER PRIMARY KEY     ,
+       AIKA              TEXT     NOT NULL,
+       EVENT            INT NOT NULL);''')
+print("Table TELLUSEVENTS created successfully")
+
 #configit
 conn.execute('''CREATE TABLE PARKKIPAIKKACONFIG
        (ID INTEGER PRIMARY KEY     ,
