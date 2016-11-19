@@ -11,8 +11,8 @@
 </head> 
 <body>
 <div>
-    <img id="bg1" src="tellus2.png"/>
-        <table>
+    <img id="bg1" src="tellusBG.png"/>
+        <table style="position: absolute; top: 309px; left: 1291px";>
         <tr>
             <td></td><td></td><td></td><td></td>
             
@@ -28,7 +28,7 @@
         </tr>
         <tr>
             <!-- empty row-->
-            <td>a</td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td><img src="blank.png"/></td>
         </tr>
         <tr>
             <td></td><td></td><td></td>
@@ -46,7 +46,7 @@
         </tr>
         <tr>
             <!-- empty row-->
-            <td>a</td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td><img src="blank.png"/></td>
         </tr>
         <tr>
             <td></td><td></td>
@@ -66,7 +66,7 @@
         </tr>
         <tr>
             <!-- empty row-->
-            <td>a</td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td><img src="blank.png"/></td>
         </tr>
         <tr>
             <td></td>
@@ -88,7 +88,7 @@
         </tr>
         <tr>
             <!-- empty row-->
-            <td>a</td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td><img src="blank.png"/></td>
         </tr>
         <tr>
             <td><img src="m{{PAIKKA37}}t.png"/></td>
@@ -112,6 +112,7 @@
         
     <!--<input type="checkbox" value="1">-->
     </table>
+    <img id="ws1" src="ws1.png" style="position: absolute; top: 308px; left: 1290px"/>
 </div>
 </body>
 </html>
