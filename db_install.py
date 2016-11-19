@@ -120,6 +120,13 @@ conn.execute('''CREATE TABLE PARKKIPAIKKACONFIG
        DELAY        INT     NOT NULL);''')
 print("Table PARKKIPAIKKACONFIG created successfully")
 
+#configit
+conn.execute('''CREATE TABLE TELLUSCONFIG
+       (ID INTEGER PRIMARY KEY     ,
+       LAYOUT              INT     NOT NULL,
+       DELAY        INT     NOT NULL);''')
+print("Table TELLUSCONFIG created successfully")
+
 
 
 conn.execute("INSERT INTO PARKKIPAIKKANUMEROT(ID,ALUE,NYKYMAARA) \
@@ -136,6 +143,9 @@ conn.execute("INSERT INTO TELLUSNUMEROT(ID,NYKYMAARA) \
       VALUES (1, 0)")
       
 conn.execute("INSERT INTO PARKKIPAIKKACONFIG(LAYOUT,DELAY) VALUES (1, 1)")
+
+conn.execute("INSERT INTO TELLUSCONFIG(LAYOUT,DELAY) VALUES (1, 1)")
+
 
 conn.commit()
 conn.close()

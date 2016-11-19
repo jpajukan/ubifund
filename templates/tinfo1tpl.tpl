@@ -114,5 +114,7 @@
     </table>
     <img id="ws1" src="ws1.png" style="position: absolute; top: 308px; left: 1290px"/>
 </div>
+<p> viive {{DELAY}} min</p>
+<p> Paikat {{FREE}} kpl</p>
 </body>
 </html>
