@@ -139,6 +139,8 @@ width: 150px;
     <br>
     <button name="event" type="submit" value="3">Ihminen etsi paikkaa mutta ei löytänyt sitä</button>
     <br>
+    <button name="event" type="submit" value="4">Ihminen katsoi tilanteen ja kääntyi pois</button>
+    <br>
     <br>
     <button name="layout" type="submit" value="1">Layout 1</button>
     <button name="layout" type="submit" value="2">Layout 2</button>
