@@ -21,14 +21,27 @@
         }
         #update {
             position: absolute;
-            top: 985px;
-            left: 0px;
-            font-size: 4em;
+            top: 980px;
+            left: 60px;
+            font-size: 3em;
             color: white;
-            height: 200px;
+            height: 44px;
             width: 1800px;
-            text-align: right; 
-        }      
+            text-align: center; 
+        }  
+        #update2 {
+            position: absolute;
+            top: 1024px;
+            left: 60px;
+            font-size: 3em;
+            color: white;
+            height: 44px;
+            width: 1800px;
+            text-align: center; 
+        } 
+        html,body {
+            overflow: hidden;
+        }        
   </style>
 </head> 
 <body>
@@ -48,6 +61,7 @@
 </div>
 <div id="free">{{FREE}}</div>​
 <div id="update">Updated {{DELAY}} min ago</div>​
+<div id="update2">Päivitetty {{DELAY}} min sitten</div>​
 
 </body>
 </html>
